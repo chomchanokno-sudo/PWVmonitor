@@ -272,7 +272,8 @@ export default function Monitor() {
     }
 
     setStatus("connecting");
-    const ws = new WebSocket(`ws://${espIP.trim()}:81`);
+    const ip = "192.168.108"
+    const ws = new WebSocket(`ws://${ip}:81`);
 
     ws.onopen = () => setStatus("connected");
     ws.onmessage = handleMessage;
